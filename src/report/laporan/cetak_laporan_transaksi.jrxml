@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9193fb35-9511-4265-878e-ca2a646a6985">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_detail_transaksi.`no_transaksi` AS tb_detail_transaksi_no_transaksi,
+     tb_transaksi.`nama_pembeli` AS tb_transaksi_nama_pembeli,
+     tb_detail_transaksi.`kode_buku` AS tb_detail_transaksi_kode_buku,
+     tb_detail_transaksi.`judul_buku` AS tb_detail_transaksi_judul_buku,
+     tb_detail_transaksi.`stok_buku` AS tb_detail_transaksi_stok_buku,
+     tb_detail_transaksi.`harga_buku` AS tb_detail_transaksi_harga_buku,
+     tb_detail_transaksi.`total_pembelian` AS tb_detail_transaksi_total_pembelian,
+     tb_transaksi.`tanggal_transaksi` AS tb_transaksi_tanggal_transaksi
+FROM
+     `tb_detail_transaksi` tb_detail_transaksi,
+     `tb_transaksi` tb_transaksi]]>
+	</queryString>
+	<field name="tb_detail_transaksi_no_transaksi" class="java.lang.String"/>
+	<field name="tb_transaksi_nama_pembeli" class="java.lang.String"/>
+	<field name="tb_detail_transaksi_kode_buku" class="java.lang.String"/>
+	<field name="tb_detail_transaksi_judul_buku" class="java.lang.String"/>
+	<field name="tb_detail_transaksi_stok_buku" class="java.lang.Integer"/>
+	<field name="tb_detail_transaksi_harga_buku" class="java.lang.Integer"/>
+	<field name="tb_detail_transaksi_total_pembelian" class="java.lang.Integer"/>
+	<field name="tb_transaksi_tanggal_transaksi" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="5ea58b62-47ba-4b51-af31-845b4bcbae26"/>
+				<staticText>
+					<reportElement x="20" y="20" width="290" height="43" forecolor="#FFFFFF" uuid="aff8434c-8a23-4bb6-b690-131d13f6ccd2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RIWAYAT TRANSAKSI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="365" y="43" width="210" height="20" forecolor="#FFFFFF" uuid="61a3af7b-670a-4c22-88b7-8e08cff4586b"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Menampilkan daftar Transaksi]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43">
+			<line>
+				<reportElement x="-20" y="39" width="595" height="1" forecolor="#666666" uuid="c036397d-b443-4dc1-baaa-3f900d834f6c"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="-10" y="0" width="79" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="e1258e49-87c8-44c5-b8a8-6cd54ef93d78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRANSAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="69" y="0" width="100" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="ba14847a-cde8-453f-a086-eddb2b1ab852"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUSTOMER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="169" y="0" width="49" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="5d642d8a-cdf1-40ef-895f-215ea11fb991"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KD BK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="218" y="0" width="102" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="0218b3d9-f5e7-4723-9848-b1d4fa48d7a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="320" y="0" width="38" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="ab54f87e-cff9-4ef6-8825-7d93e6f78eda"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="358" y="0" width="69" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="39f45cde-cc4c-4e21-8e61-13288a9d00d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="427" y="0" width="69" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="f560ab93-f212-43c6-886d-df4891f1ce6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TTL BELI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="496" y="0" width="69" height="36" forecolor="#006699" backcolor="#E6E6E6" uuid="eb80b20a-b729-4ae2-85d5-91c6d02d0668"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="209">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-20" y="-46" width="595" height="1" uuid="79a99ec2-f5ce-4052-a7f7-5010093333e6"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="-10" y="0" width="79" height="73" uuid="25539667-59c6-4d0b-9e74-39340f28ee1d"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_detail_transaksi_no_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="69" y="0" width="100" height="73" uuid="23f6a994-bbfa-47f4-aa73-09062c307194"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_transaksi_nama_pembeli}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="169" y="0" width="49" height="73" uuid="7e4e1015-3c06-491a-b2a9-41caa033e7ab"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_detail_transaksi_kode_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="218" y="0" width="102" height="73" uuid="e316a8eb-b547-4657-91ce-a00712a79255"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_detail_transaksi_judul_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="320" y="0" width="38" height="73" uuid="e7b8362e-46a4-4681-80a7-41be0ae10e91"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_detail_transaksi_stok_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="358" y="0" width="69" height="73" uuid="600c6827-cb0f-4bb2-817c-55912b8e4ea8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RP."+$F{tb_detail_transaksi_harga_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="427" y="0" width="69" height="73" uuid="df18374b-6d88-4ba5-a761-f1ca80eacb18"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RP."+$F{tb_detail_transaksi_total_pembelian}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="496" y="0" width="69" height="73" uuid="74891551-2ae5-462f-be75-33f79471c3bb"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_transaksi_tanggal_transaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="32">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c43837c2-2fec-4a8c-a975-047da3063611"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="7f148e32-c552-4d59-b8e6-b246367ad7af"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="56e60c48-e74b-479a-bad2-2a56ba74b391"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

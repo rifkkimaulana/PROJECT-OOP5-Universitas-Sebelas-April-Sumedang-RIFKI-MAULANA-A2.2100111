@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c738003f-c372-4139-bb84-4b3ae16b0ea7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_buku.`kode_buku` AS tb_buku_kode_buku,
+     tb_buku.`judul_buku` AS tb_buku_judul_buku,
+     tb_buku.`kategori_buku` AS tb_buku_kategori_buku,
+     tb_buku.`harga_beli` AS tb_buku_harga_beli,
+     tb_buku.`harga_jual` AS tb_buku_harga_jual,
+     tb_buku.`stok_buku` AS tb_buku_stok_buku
+FROM
+     `tb_buku` tb_buku]]>
+	</queryString>
+	<field name="tb_buku_kode_buku" class="java.lang.String"/>
+	<field name="tb_buku_judul_buku" class="java.lang.String"/>
+	<field name="tb_buku_kategori_buku" class="java.lang.String"/>
+	<field name="tb_buku_harga_beli" class="java.lang.Integer"/>
+	<field name="tb_buku_harga_jual" class="java.lang.Integer"/>
+	<field name="tb_buku_stok_buku" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="0b6566d0-0507-4f44-bd2d-f5ee907aa061"/>
+				<staticText>
+					<reportElement x="20" y="20" width="276" height="43" forecolor="#FFFFFF" uuid="38227378-ab6a-47a5-b98e-9f3e654b8fbf"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DAFTAR BUKU]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="334" y="43" width="241" height="20" forecolor="#FFFFFF" uuid="e37a2f7f-85e0-40db-b345-c8e835def569"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Menampilkan daftar buku tersedia]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="875f4320-788c-4e05-842b-d0f5a1db71de"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="46" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="19da2440-bb7b-4b1a-b076-4756e8a55f25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="46" y="0" width="168" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="bcb13460-91c8-4639-a344-79f02cc12256"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="214" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="aeb624df-00cd-4a21-9956-b4c9b47b2f70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KATEGORI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="306" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="869c6ba0-5e60-4d70-9c7b-181901716dea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA BELI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="398" y="0" width="95" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="01973036-25a0-4b33-88ec-820a15d6f07f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA JUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="493" y="0" width="62" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="846583d1-0ece-4617-a4b1-3303541e64b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="8e2ccdfb-000b-4775-934f-aafa36864418"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="46" height="20" uuid="f8132c8f-298e-4e5b-9aa8-f683f53330af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_buku_kode_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="62" y="0" width="136" height="20" uuid="59242034-c8a1-4477-a54a-03fd7b17344f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_buku_judul_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="198" y="0" width="108" height="20" uuid="4b414535-51d4-4c83-8c39-f176034aaaac"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_buku_kategori_buku}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="306" y="0" width="92" height="20" uuid="677f2851-481a-45f5-a4e3-2b957edb6605"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_buku_harga_beli}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="398" y="0" width="92" height="20" uuid="e4113271-5774-41ed-9e3b-2530682e83cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_buku_harga_jual}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="493" y="0" width="62" height="20" uuid="53f9ff97-9713-4f05-9d53-2aa86b3d706a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_buku_stok_buku}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="ca63bd5a-4bf9-455f-9b6a-baa0542dd9b9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="07ce0ef0-83f6-4495-8f54-fab9668ea670"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="17566e6c-6c75-4fac-92ff-a5d5b4e40b80"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
